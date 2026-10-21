@@ -1,4 +1,4 @@
-FROM php:8.4.10-apache
+FROM php:8.4.27-apache
 
 # Let's encrypt
 RUN export TERM=dumb ; export DEBIAN_FRONTEND=noninteractive ; apt-get update && apt-get install -y \
@@ -9,6 +9,7 @@ RUN export TERM=dumb ; export DEBIAN_FRONTEND=noninteractive ; apt-get update &&
 RUN export TERM=dumb ; export DEBIAN_FRONTEND=noninteractive ; apt-get update && apt-get install -y \
     libapache2-mod-fcgid \
     libfreetype6-dev \
+    libicu-dev \
     libjpeg-dev \
     libonig-dev \
     libpng-dev \
