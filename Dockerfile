@@ -1,4 +1,4 @@
-FROM php:8.4.27-apache
+FROM php:8.5.12-apache
 
 # Let's encrypt
 RUN export TERM=dumb ; export DEBIAN_FRONTEND=noninteractive ; apt-get update && apt-get install -y \
@@ -19,7 +19,7 @@ RUN export TERM=dumb ; export DEBIAN_FRONTEND=noninteractive ; apt-get update &&
 RUN a2enmod fcgid headers http2 proxy proxy_fcgi proxy_http rewrite ssl
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg && \
     docker-php-ext-install -j$(nproc) \
-      gd intl mbstring opcache pdo xml zip \
+      gd intl mbstring pdo xml zip \
       mysqli pdo_mysql \
   && apt-get clean && rm -rf /var/lib/apt/lists/*
 

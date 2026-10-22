@@ -94,6 +94,6 @@ docker run -d --restart always \
     -e VAULT_VERSION=xxxxxxxxx \
     -e VAULT_FILE=xxxxxxxxx.jar \
     --name allsites \
-    foilen/fdi-vault-apache_php:8.4.27-1 && \
+    foilen/fdi-vault-apache_php:8.5.12-1 && \
 docker logs -f allsites
 ```
