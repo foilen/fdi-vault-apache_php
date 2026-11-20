@@ -1,4 +1,4 @@
-FROM php:8.5.12-apache
+FROM php:8.5.13-apache
 
 # Let's encrypt
 RUN export TERM=dumb ; export DEBIAN_FRONTEND=noninteractive ; apt-get update && apt-get install -y \
